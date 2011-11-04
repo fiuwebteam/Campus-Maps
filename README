@@ -1,0 +1,48 @@
+Requirements:
+MySQL
+PHP
+Memcache
+Google Earth
+
+Quick note before we start.
+
+This installation document will only be focusing on a single layer installation, the buildings layer. By default there are six layers that the application can handle: buildings, parking, parking with meters, bicycles, art, and field layers. 
+
+I will go over the other layers later in the future, but if you want to remove any layers, open the index.php, find the extrasList box, line 47, and remove the list items holding the layers you do not want in your installation.
+
+WARNING: DO NOT SKIP ANY STEPS! 
+Make sure all the installation required programs are installed, you will need all of them.
+
+Simple Installation:
+
+Making the KML file
+
+1.Open Google Earth and find your campus.
+2.Polygon all the buildings in your campus. Color it and add descriptions if you want. Have fun!
+3.Save the file as a kml, not kmz!
+4.Open the kml file with a text editor.
+5.Scroll down until you begin to find the Placemark tags. (Ctrl+F if you want to be slick).
+6.Each Placemark represents each polygon of the buildings you created.
+7.IMPORTANT: Add a distinct id to each placemark. (If you have a faster way of doing this I would love to hear from you). Ex: <Placemark> to <Placemark id="something">
+8.Save the file and upload online.
+9.Open the file sql_gen.php in a browser.
+10.It will ask you to input a kml file. Point it to the kml file you just saved and uploaded.
+11.The site should know display a bunch of sql code, copy and paste it to a document. Name it buildings.sql.
+12.Optional: You can go ahead and compress your kml file into a kmz file (just zip the file and rename the extension from zip to kmz)
+13.We're done with the KML/KMz file now.
+
+Setting up the database.
+1.Open up your mysql installation and use map.sql to set up your schema.
+2.Once that is done, use the buildings.sql file created in the previous steps and populate your database.
+
+Configuring your files
+1.Go into the js folder and open up work.js
+2.Go to line 5 and update the location of your kml/kmz file for your building. (The google api requires the kml/kmx file to be online, so use the full url, ie: http://www.foo.com/something.kml)
+3.Modify the defaultLat and defaultLng to the center of your campus.
+4.Open up the config.php file on the root folder.
+5.Put in your database information, username for the backend, and the password for the backend, you can ignore the session variables, but you can change them if you want. Just make sure they are different.
+
+
+You are done!
+
+And I think I covered everything you need to know to install the buildings layer. Any problems, shoot me an email at amolive@fiu.edu

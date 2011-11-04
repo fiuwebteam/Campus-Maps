@@ -1,0 +1,498 @@
+/* CSS RESET */
+
+
+
+/*
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors:Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
+time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+article, aside, figure, footer, header, hgroup, nav, section {display:block;}
+nav ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+a {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent;}
+ins {background-color:#ff9; color:#000; text-decoration:none;}
+mark {background-color:#ff9; color:#000; font-style:italic; font-weight:bold;}
+del {text-decoration:line-through;}
+abbr[title], dfn[title] {border-bottom:1px dotted #000; cursor:help;}
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse:collapse; border-spacing:0;}
+hr {display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0;}
+input, select {vertical-align:middle;}
+
+
+
+/* REDECLARATIONS
+   ----------------------------------------------------*/
+
+
+html {
+	height: 100%
+}
+
+body { 
+	height: 100%;
+	margin: 0px;
+	font-family:'Lucida Grande', Lucida, Helvetica, Arial, sans-serif;
+}
+
+#map_canvas { 
+	height: 100%;
+	width: 100%;
+}
+
+/*
+#atozList {
+	height: 35px;
+	cursor:pointer;
+}
+
+#atozList ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+#atozList li {
+	width:9px;
+	padding-right:3px;
+	color: #002D62;
+	font-size: 12px;
+	font-weight: bold;
+	text-align:center;
+	text-decoration: underline;
+	display:block;	
+	float:left;	
+}
+
+#atozList li:hover {
+	color:#7F1B1D;
+	background-color: #ccc;
+}
+*/
+#content { 
+	width: 100%;	
+	text-align:center; 
+	overflow:auto;
+	min-height: 190px;
+}
+
+#campusList{
+	width:155px;
+	padding: 6px;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #c9c9c9;
+	background-image: none !important;
+	background-color: #f5f5f5 !important;
+}
+
+#searchField{
+	width:123px;
+	padding: 6px;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #c9c9c9;
+	background-image: none !important;
+	background-color: #f5f5f5 !important;	
+}
+
+#menuBox {
+	width:160px;	
+	padding: 10px;
+	position:absolute;
+	top:30px;
+	left:75px;	
+	border-radius: 15px 0px 15px 15px;
+	-moz-border-radius: 15px 0px 15px 15px;
+	background-color: white;
+	box-shadow:0 0 15px black; 
+	-webkit-box-shadow:0 0 15px black; 
+	-moz-box-shadow:0 0 15px black;
+	z-index:1;
+}
+
+#extrasList {
+	width:165px;
+	color: #002D62;
+	top:0px;
+	left:180px;
+	position:absolute;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+#extrasList li {
+	font-size: 12px;	
+	display:block;
+}
+
+#extrasList li:hover {
+	color: #fff;	
+	background-color:#002D62;
+}
+
+#extrasList ul {
+	margin: 0px;
+	padding:5px;
+	float:left;	
+	height:130px;
+}
+
+#extrasList label {
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+#contentBox {
+	width:30%;
+	max-width:265px;	
+	padding: 10px;
+	top:55px;
+	right:5px;
+	display:none;
+	position:absolute;	
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	background-color: white;
+	z-index:1;
+	max-height:80%;
+	overflow:auto;
+	
+}
+
+#extraShowHide {
+	height:80px; 
+	width:15px;
+	background-color:#002D62;
+	border-radius: 0px 15px 15px 0px;
+	-moz-border-radius: 0px 15px 15px 0px;	
+	float:left;
+	color: #fff;
+	padding-top:60px;
+	padding-left:5px;
+}
+
+#extraShowHide span {
+	cursor:pointer;
+}
+
+#extraShowHide:hover {
+	background-color: #ccc;
+	color:#7F1B1D;
+}
+
+#otherOptions {
+	position:absolute;
+	width:145px;
+	height:12px;
+	background-color: #FCFCFC;
+	z-index:1;
+	top:6px;
+	right:110px;
+	font-size:12px;
+	padding:3px;	
+	color: blue;
+	cursor:pointer;
+	box-shadow:0 0 15px black; 
+	-webkit-box-shadow:0 0 5px black; 
+	-moz-box-shadow:0 0 5px black;
+	border: 1px solid #6F8CCE;
+	color: black;
+	text-align: center;
+}
+
+/*
+#otherOptions {
+	text-decoration: none;
+	color: black;
+}
+*/
+
+#otherOptions a {
+	color: black;
+	text-decoration: none;
+}
+
+#otherOptions a:hover {
+	text-decoration: none;
+}
+
+.otherTools{
+	font-weight: bolder;
+	color: #bb002f;}
+
+#myLocations {
+	padding:5px;
+}
+
+#myLocationsTitle{
+	
+	border-top: 1px dotted #002D62;
+	border-bottom: 1px dotted #002D62;
+	color: #C5960C;
+	display: block;
+	}
+
+.locItem {
+	position:relative;
+}
+
+#myLocations ul {
+	padding: 0px;
+	margin: 0px;
+	cursor:pointer;
+}
+
+#myLocations li {
+	
+	color: #002D62;
+	font-size: 12px;
+	text-align:left;
+	text-decoration: underline;
+	display:block;	
+}
+
+#result {
+	cursor:pointer;
+}
+
+#result ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+#result li {
+	padding-left:5px;
+	color: #002D62;
+	font-size: 12px;
+	line-height: 18px;
+	text-align:left;
+	text-decoration: underline;
+	display:block;	
+}
+
+#result li:hover {
+	color: #fff;
+	background-color:#002D62;
+}
+
+#closeContent {
+	margin: 0px;
+	text-align:right;
+}
+
+#closeContent span {
+	cursor:pointer;
+}
+
+#closeResult {
+	text-align:right;
+}
+
+#closeResult span:hover {
+	color: #fff;
+}
+
+#campusOptions {
+	margin-bottom: 5px;
+}
+
+#search_box {
+	margin-bottom: 5px;
+	font-size: 10px;
+}
+
+#functions {
+	padding:5px;
+	font-size: 11px;
+}
+
+#functions span:hover {
+	text-decoration: underline;
+}
+
+#optionsDiv {
+	padding-top: 10px;
+	text-align:right;
+	cursor:pointer;
+	position:relative;
+	color: #C5960C;
+}
+
+#optionsDiv span a{
+color: #C5960C;
+}
+
+#campus {
+	font-size: 11px;
+}
+
+#resultBox {
+	display:none;
+}
+
+#extras {
+	display:none;
+	background-color: white;
+}
+
+#closeResult span {
+	cursor:pointer;
+}
+
+
+#pdfBox {
+	display:none;
+	position:absolute;
+	width:30px;
+	height:32px;
+	top:21px;
+	right:-15px;
+	background-color:white;
+	padding:5px;
+}
+
+.noPadding {
+	padding: 0px;
+}
+
+.searchTag {
+	padding: 0px 5px;
+	color: #fff;
+	-moz-border-radius: 15px 0px 0px 15px;
+	border-radius: 15px 0px 0px 15px;
+	background-color:#002D62;
+	cursor:pointer;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.dropTag {
+	padding: 0px 3px;
+	color: #fff;
+	-moz-border-radius: 0px 15px 15px 0px;
+	border-radius: 0px 15px 15px 0px;	
+	background-color:#C5960C;	
+	cursor:pointer;
+	font-size: 12px;
+}
+
+.title {
+	font-size:14px;	
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+	font-weight: bold;
+	color: #002D62;
+}
+
+.closeMe {
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+.locTitle {
+	display:block;
+	width:130px;
+	line-height: 18px;
+}
+
+.locTitle:hover {
+	color: #fff;
+	background-color:#002D62;
+}
+
+.descriptionText {
+	font-size:12px;
+	text-align: left;
+	margin-left: 25px;
+	margin-right: 20px;
+}
+
+.descriptionText a{
+	color: #C5960C;
+}
+
+
+
+.add {
+	position:relative;
+	top: 5px;
+}
+
+#feedback {
+	z-index:2;
+    position: absolute;
+    background: none repeat scroll 0 0 #F2F06D;
+    font-size: 1.5em;
+    height: 3em;
+    text-align: center;
+}
+
+#feedback a {
+    background-image: url("../images/feedback.gif");
+    height: 102px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    text-indent: -1000px;
+    top: 45%;
+    width: 34px;
+    z-index: 1001;
+}
+
+.smallFont {
+	font-size:80%;
+}
+
+#searchInfoMarker:hover {
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+#searchInfo {
+	width:175px;
+	height:90px;
+	position:absolute;
+	background-color:#EEE;
+	left:175px;
+	border-style:double;
+	border-width:3px;
+	padding:5px;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display:none;	
+}
+
+/* give slideshow some style */
+#slideshow { margin: 20px auto; width: 800px; height: 525px; }
+
+/* give each slide the same dimensions */
+#slideshow div { width: 100%; height: 525px;  }
+
+/* make sure each slide image is centered */
+#slideshow div img { 
+	margin: auto;
+	display: block;
+	max-height: 545px;
+}
+
+#prev {
+	float:left;
+}
+
+#next {
+	float:right;
+}
+
+.fancyBox img {
+	cursor:pointer;
+}

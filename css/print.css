@@ -1,0 +1,9 @@
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px; }
+#map_canvas { width:800px; height:500px;}
+#notesInput { width:800px; height:100px; }
+span {
+	color:blue;
+	text-decoration: underline;
+	cursor:pointer;
+}
